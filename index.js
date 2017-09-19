@@ -9,10 +9,8 @@ const template = mappedPlayers[0];
 const reducedPlayers = mappedPlayers.slice(1).reduce((players, playerArr) => {
   return players.concat(
     template.reduce((player, attribute, attributeIndex) => {
-      return {
-        ...player,
-        [attribute]: playerArr[attributeIndex]
-      };
+      player[attribute] = playerArr[attributeIndex];
+      return player;
     }, {})
   );
 }, []);
