@@ -14,4 +14,6 @@ const reducedPlayers = mappedPlayers.slice(1).reduce((players, playerArr, index)
   return players;
 }, {});
 
+delete reducedPlayers[""];
+
 fs.writeFileSync("./reduced-players.json", JSON.stringify(reducedPlayers, null, 2));
