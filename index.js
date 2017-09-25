@@ -3,10 +3,11 @@ const fs = require("fs");
 const playersCSV = fs.readFileSync("./Master.csv", "utf-8");
 
 const mappedPlayers = playersCSV.split("\n").map(item => item.split(","));
+const playersLen = mappedPlayers.length - 1;
 
 const template = mappedPlayers[0];
 const templateLen = template.length;
-const playersLen = mappedPlayers.length;
+
 let players = {};
 for (let i = 1; i < playersLen; i++) {
   let player = {};
@@ -22,8 +23,8 @@ for (let i = 1; i < playersLen; i++) {
     return player;
   }, {});
   return players;
-}, {});*/
+}, {});
 
-//delete players[""];
+delete players[""];*/
 
 fs.writeFileSync("./reduced-players.json", JSON.stringify(players, null, 2));
