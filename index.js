@@ -22,7 +22,8 @@ for (let i = 1; i < playersLen; i++) {
     return player;
   }, {});
   return players;
-}, {});
-*/
+}, {});*/
+
+//delete players[""];
 
 fs.writeFileSync("./reduced-players.json", JSON.stringify(players, null, 2));
