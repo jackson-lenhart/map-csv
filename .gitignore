@@ -1,7 +1,2 @@
-Untitled
-
-Pitching.csv
-
-reduced-players.json
-
-old-school-index.js
+# ignore dependencies
+node_modules
